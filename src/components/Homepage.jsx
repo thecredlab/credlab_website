@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import logoBlack from "../logo-all-black.svg";
-import downArrow from "../down-arrow.svg";
+import logoBlack from "../images/logo-all-black.svg";
+import downArrow from "../images/down-arrow.svg";
 import AutoTypeComponent from "./AutoTypingComponent";
 import Tags from "./Tags";
 import Careers from "./Careers";
+import Contact from "./Contact";
 
 const Homepage = () => {
   const [activeLink, setactiveLink] = useState("");
@@ -26,8 +27,8 @@ const Homepage = () => {
         nextSectionOffset < window.innerHeight
       ) {
         setactiveLink("home");
-      } else {
-        setactiveLink("");
+        // } else {
+        //   setactiveLink("");
       }
     };
 
@@ -62,7 +63,6 @@ const Homepage = () => {
           <nav>
             {activeLink !== "home" && (
               <a
-                active
                 href="#home"
                 className={`link ${activeLink === "home" ? "active" : ""}`}
                 onClick={() => handleClick("home")}
@@ -71,7 +71,6 @@ const Homepage = () => {
               </a>
             )}
             <a
-              active
               href="#about"
               className={`link ${activeLink === "about" ? "active" : ""}`}
               onClick={() => handleClick("about")}
@@ -171,6 +170,11 @@ const Homepage = () => {
         <h2>Careers</h2>
         <Careers />
       </section>
+      <section className="contact" id="contact">
+        <h2>Contact Us</h2>
+        <Contact />
+      </section>
+      <footer>&copy; 2024 TheCredlab. All rights reserved.</footer>
     </>
   );
 };

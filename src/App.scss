@@ -126,9 +126,20 @@ header {
   }
 }
 
-.about-us h2 {
-  padding-top: 45px;
-  padding-bottom: 10px;
+.about-us {
+  width: 80%;
+  margin: auto;
+  h2 {
+    padding-top: 45px;
+    padding-bottom: 10px;
+  }
+}
+
+.services {
+  width: 100%;
+  .services-content {
+    width: 100%;
+  }
 }
 .about-us,
 .services {
@@ -136,12 +147,11 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
   padding-bottom: 25px;
 
   .about-us-summary,
   .services-content {
-    width: 80%;
     margin-top: 25px;
     display: flex;
     flex-direction: column;
@@ -173,6 +183,9 @@ header {
 }
 
 .services {
+  h2 {
+    padding-top: 50px;
+  }
   background-color: #fff;
   .services-content {
     .left-side,
@@ -220,12 +233,15 @@ header {
 }
 
 .careers {
+  h2 {
+    padding-top: 50px;
+  }
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
-  height: 80vh;
+  text-align: justify;
 
   .title {
     font-size: 18px;
@@ -238,7 +254,175 @@ header {
       font-size: 12px;
     }
   }
+  p {
+    font-size: 14px;
+  }
   span {
     font-weight: bold;
   }
+  .careers-modal {
+    text-align: center;
+    .empty-line {
+      margin-top: 15px;
+      display: inline-block;
+      border: 0.5px solid #555;
+      width: 150px;
+    }
+  }
 }
+
+.careers-modal {
+  .apply-btn {
+    background-color: #000;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease-in;
+    }
+  }
+}
+
+.contact {
+  h2 {
+    padding-top: 50px;
+  }
+  margin-bottom: 40px;
+  form {
+    margin: auto;
+    width: max-content;
+  }
+}
+.form {
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 250px;
+    padding: 10px;
+    margin: 5px 0 5px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    width: 300px;
+  }
+
+  /* Apply additional styles when the text input is focused */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #bfbfbf;
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(191, 191, 191, 0.5);
+  }
+
+  /* Apply styles when the text input is hovered */
+  input[type="text"]:hover,
+  input[type="email"]:hover,
+  textarea:hover {
+    background-color: #f8f9fa;
+  }
+
+  input[type="file"] {
+    margin: 5px 0 5px 20px;
+  }
+
+  button[type="submit"] {
+    display: block;
+    margin: 20px auto 0;
+    border: none;
+    padding: 8px 15px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.03);
+      // transform: translate(1px, 1px);
+      transition: transform 0.1s;
+    }
+  }
+  label span {
+    display: inline-block;
+    width: 100px;
+  }
+
+  label.file {
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  label.message {
+    display: flex;
+    align-items: center;
+  }
+}
+.small-text {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.med-text {
+  text-align: justify;
+  font-size: 14px;
+}
+
+.modal-content {
+  margin: 20px;
+}
+
+.spinner {
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border: 5px solid #000;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.something-wrong {
+  color: #e74c3c;
+  text-align: center;
+}
+
+.submitted {
+  background-image: url("./images/greentick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #555;
+}
+// #000000 (Black)
+// #555555 (Dark Gray)
+// #ffffff (White)
+// #bfbfbf (Light Gray)
+// #3498db (Royal Blue)
+// #e74c3c (Alizarin Red)
+// #2ecc71 (Emerald Green)
+// #f39c12 (Orange)
+// #9b59b6 (Amethyst Purple)
+// #16a085 (Green Sea)
