@@ -36,6 +36,7 @@ const Form = (props) => {
       <label>
         <span>First Name:</span>
         <input
+          required
           type="text"
           name="firstName"
           value={formData.firstName}
@@ -56,6 +57,7 @@ const Form = (props) => {
       <label>
         <span>Email:</span>
         <input
+          required
           type="email"
           name="email"
           value={formData.email}
@@ -76,6 +78,7 @@ const Form = (props) => {
           <label className="message">
             <span>Message:</span>
             <textarea
+              required
               name="message"
               onChange={handleChange}
               rows="4"

@@ -123,24 +123,28 @@ const Homepage = () => {
         <div className="about-us-summary">
           <div className="left-side">
             <p className="left-text">
-              <strong className="welcome">Welcome to Credlab</strong>, a
-              distinguished force in IT consulting, excelling in Talent
-              Acquisition, Client Engagement, Onboarding, and Digital
-              Transformation. We revolutionize Talent Acquisition, delivering
-              top-tier professionals for organizational success.
+              <span>
+                <strong className="welcome">Welcome to Credlab</strong>, a
+                distinguished force in IT consulting, excelling in Talent
+                Acquisition, Client Engagement, Onboarding, and Digital
+                Transformation. We revolutionize Talent Acquisition, delivering
+                top-tier professionals for organizational success.
+              </span>
             </p>
             <p className="empty"></p>
           </div>
           <div className="right-side">
             <p className="empty"></p>
             <p className="right-text">
-              Through collaborative Client Engagement, we understand unique
-              needs and provide tailored solutions. Our streamlined Onboarding
-              ensures seamless integration, while our commitment to Digital
-              Transformation propels businesses into the future. With a
-              client-centric ethos, cutting-edge solutions, and seasoned
-              professionals, Credlab is your trusted partner for navigating the
-              intricacies of IT and maximizing digital potential.
+              <span>
+                Through collaborative Client Engagement, we understand unique
+                needs and provide tailored solutions. Our streamlined Onboarding
+                ensures seamless integration, while our commitment to Digital
+                Transformation propels businesses into the future. With a
+                client-centric ethos, cutting-edge solutions, and seasoned
+                professionals, Credlab is your trusted partner for navigating
+                the intricacies of IT and maximizing digital potential.
+              </span>
             </p>
           </div>
         </div>
@@ -149,7 +153,6 @@ const Homepage = () => {
         <h2>Services</h2>
         <div className="services-content">
           <div className="left-side">
-            {/* <h3>Industries</h3> */}
             <div className="left-text">
               <h3>Business</h3>
               <Tags list={businessTags} />
@@ -158,7 +161,7 @@ const Homepage = () => {
           </div>
           <div className="right-side">
             <p className="empty"></p>
-            <div className="left-text">
+            <div className="right-text">
               <h3>Solutions</h3>
               <Tags list={servicesTags} />
             </div>

@@ -133,12 +133,28 @@ header {
     padding-top: 45px;
     padding-bottom: 10px;
   }
+
+  .left-text,
+  .right-text {
+    display: flex;
+    align-items: center;
+  }
+
+  .left-text {
+    strong {
+      font-size: 20px;
+    }
+    outline: 5px solid #555 !important;
+  }
+  .right-text {
+    outline: 5px solid #555 !important;
+  }
 }
 
 .services {
   width: 100%;
   .services-content {
-    width: 100%;
+    width: 80%;
   }
 }
 .about-us,
@@ -152,7 +168,7 @@ header {
 
   .about-us-summary,
   .services-content {
-    margin-top: 25px;
+    margin-top: 9vh;
     display: flex;
     flex-direction: column;
     .left-side,
@@ -169,7 +185,6 @@ header {
       .right-text {
         width: 50%;
         height: 30vh;
-        border: 0.5px solid #555;
         text-align: center;
         line-height: 24px;
       }
@@ -199,6 +214,7 @@ header {
     .left-side {
       .left-text {
         background-color: #f8f8f8;
+        border-left: 5px solid #555;
       }
       .empty {
         background-image: url("./images/business.jpg");
@@ -207,6 +223,9 @@ header {
     .right-side {
       .empty {
         background-image: url("./images/solutions.jpg");
+      }
+      .right-text {
+        border-right: 5px solid #555;
       }
     }
 
@@ -221,7 +240,9 @@ header {
   display: flex;
   flex-flow: wrap;
   gap: 8px;
-  justify-content: normal;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
   p.tags {
     background-color: transparent;
     padding: 5px 10px;
