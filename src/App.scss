@@ -1,0 +1,244 @@
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.header-section {
+  position: sticky;
+  top: 0;
+}
+//Header
+header {
+  display: flex;
+  .logo {
+    width: 150px;
+  }
+  justify-content: space-between;
+  padding: 20px;
+
+  nav {
+    height: 20px;
+    a {
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+      margin: 0 10px 0 10px;
+      transition: border 0.2s ease;
+      display: inline-block;
+      width: max-content;
+
+      &.active {
+        border-bottom: 1px solid #555;
+      }
+      &:hover {
+        color: #555;
+        border-bottom: 3px solid #555;
+      }
+    }
+  }
+  align-items: center;
+  background-color: #fff;
+}
+
+//Hero
+.herobody {
+  height: 70vh;
+  display: flex;
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: #f8f8f8;
+    .summary {
+      color: #000;
+      font-size: 32px;
+      padding-bottom: 70px;
+      text-align: left;
+      padding: 20px;
+    }
+    .autotype {
+      margin-top: 40px;
+      width: 90%;
+      .text {
+        color: #555;
+        font-size: 48px;
+      }
+      .cursor {
+        margin-left: 5px;
+        color: #555;
+      }
+    }
+    align-items: center;
+  }
+  .right-side {
+    width: 65%;
+    background-image: url("./images/heroimage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(66, 62, 62, 0.7);
+    background-blend-mode: color;
+  }
+}
+
+.down-arrow-section {
+  margin-top: 11vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70px;
+  a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      display: block;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    img {
+      width: 32px;
+      animation-name: downArrowAnimation;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+  }
+}
+
+@keyframes downArrowAnimation {
+  from {
+    padding-top: 0px;
+  }
+  to {
+    padding-top: 10px;
+  }
+}
+
+.about-us h2 {
+  padding-top: 45px;
+  padding-bottom: 10px;
+}
+.about-us,
+.services {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  padding-bottom: 25px;
+
+  .about-us-summary,
+  .services-content {
+    width: 80%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    .left-side,
+    .right-side {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      .empty {
+        width: 50%;
+        height: 30vh;
+      }
+      .left-text,
+      .right-text {
+        width: 50%;
+        height: 30vh;
+        border: 0.5px solid #555;
+        text-align: center;
+        line-height: 24px;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.services {
+  background-color: #fff;
+  .services-content {
+    .left-side,
+    .right-side {
+      .left-text,
+      .right-text {
+        background-color: #f8f8f8;
+        border: 0px;
+      }
+    }
+    .left-side {
+      .left-text {
+        background-color: #f8f8f8;
+      }
+      .empty {
+        background-image: url("./images/business.jpg");
+      }
+    }
+    .right-side {
+      .empty {
+        background-image: url("./images/solutions.jpg");
+      }
+    }
+
+    .empty {
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.services-tags {
+  display: flex;
+  flex-flow: wrap;
+  gap: 8px;
+  justify-content: normal;
+  p.tags {
+    background-color: transparent;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    margin: 0 5px;
+    font-size: 14px;
+  }
+}
+
+.careers {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  height: 80vh;
+
+  .title {
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: bold;
+    span {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: normal;
+      font-size: 12px;
+    }
+  }
+  span {
+    font-weight: bold;
+  }
+}
